@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kragba Deuh Henriette Dadi — Community Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#FAF7F2;--ink:#1A1410;--terra:#C4633A;--gold:#D4A853;--sand:#E8DFD0;--muted:#7A6E65}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,242,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand);padding:1rem 5vw;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;color:var(--ink);text-decoration:none}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.nav-links a:hover{color:var(--terra)}
+.hero{padding-top:70px;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-left:6vw;padding-right:6vw;padding-bottom:4rem;background:linear-gradient(160deg,var(--cream) 60%,var(--sand) 100%)}
+.hero-tag{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--terra);margin-bottom:1.2rem}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,8vw,4.5rem);line-height:1.15;margin-bottom:1.5rem}
+.hero-title em{font-style:italic;color:var(--terra)}
+.hero-avatar{width:110px;height:110px;border-radius:50%;background:linear-gradient(145deg,#d9cfc3,#c4b89e);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:'Playfair Display',serif;font-size:2rem;color:var(--cream);box-shadow:0 8px 30px rgba(196,99,58,0.2)}
+.hero-desc{font-size:0.95rem;line-height:1.75;color:var(--muted);max-width:500px;margin:0 auto 2rem;font-weight:300}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn-primary{background:var(--ink);color:var(--cream);padding:0.85rem 1.8rem;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none}
+.btn-primary:hover{background:var(--terra)}
+.btn-outline{border:1.5px solid var(--ink);color:var(--ink);padding:0.85rem 1.8rem;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none}
+.btn-outline:hover{background:var(--ink);color:var(--cream)}
+.hero-location{margin-top:2rem;font-family:'Playfair Display',serif;font-style:italic;font-size:0.85rem;color:var(--muted)}
+.stats{background:var(--ink);display:grid;grid-template-columns:repeat(2,1fr)}
+.stat{text-align:center;padding:2rem 1rem;border-right:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}
+.stat:nth-child(2n){border-right:none}
+.stat:nth-child(3),.stat:nth-child(4){border-bottom:none}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);display:block}
+.stat-label{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:0.3rem;display:block}
+.section{padding:4rem 6vw}
+.section-bg{background:var(--sand)}
+.s-tag{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--terra);margin-bottom:0.6rem}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,5vw,2.5rem);line-height:1.2;margin-bottom:0.8rem}
+.s-sub{font-size:0.88rem;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:2.5rem}
+.skills-grid{display:flex;flex-direction:column;gap:2px}
+.skill-card{background:var(--cream);padding:1.8rem;border-left:3px solid transparent;transition:border-color 0.2s}
+.skill-card:hover{border-left-color:var(--terra)}
+.skill-icon{font-size:1.5rem;margin-bottom:0.8rem}
+.skill-name{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:0.4rem}
+.skill-desc{font-size:0.82rem;color:var(--muted);line-height:1.6;font-weight:300}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:0.8rem}
+.tag{font-size:0.64rem;letter-spacing:0.06em;text-transform:uppercase;background:var(--sand);color:var(--muted);padding:0.25rem 0.6rem}
+.exp-item{padding:2rem 0;border-bottom:1px solid var(--sand)}
+.exp-item:last-child{border-bottom:none}
+.exp-period{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);margin-bottom:0.3rem}
+.exp-company{font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem;font-weight:300}
+.exp-role{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:0.8rem}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.35rem}
+.exp-bullets li{font-size:0.82rem;color:var(--muted);font-weight:300;padding-left:1rem;position:relative;line-height:1.5}
+.exp-bullets li::before{content:'—';position:absolute;left:0;color:var(--terra)}
+.exp-kpi{display:flex;gap:1.5rem;margin-top:1.2rem;flex-wrap:wrap}
+.kpi{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--terra)}
+.kpi span{display:block;font-family:'DM Sans',sans-serif;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.formations-grid{display:flex;flex-direction:column;gap:2px}
+.formation-card{background:var(--cream);padding:1.5rem 1.8rem}
+.formation-year{font-size:0.66rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem}
+.formation-title{font-family:'Playfair Display',serif;font-size:0.95rem;line-height:1.35;margin-bottom:0.2rem}
+.formation-org{font-size:0.78rem;color:var(--muted);font-weight:300}
+.projects-list{display:flex;flex-direction:column;gap:2px}
+.project-card{padding:2rem;position:relative}
+.project-card.featured{background:var(--ink);color:var(--cream)}
+.project-card:not(.featured){background:var(--sand)}
+.project-platform{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
+.project-card:not(.featured) .project-platform{color:var(--terra)}
+.project-name{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:0.6rem;line-height:1.3}
+.project-desc{font-size:0.8rem;opacity:0.65;line-height:1.6;font-weight:300}
+.project-result{margin-top:1.2rem;font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold)}
+.project-result span{display:block;font-family:'DM Sans',sans-serif;font-size:0.64rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.project-result-sm{margin-top:1rem;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--terra)}
+.project-result-sm span{display:block;font-family:'DM Sans',sans-serif;font-size:0.64rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.tools-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
+.tool-chip{padding:0.5rem 1rem;border:1px solid #d0c8bc;font-size:0.75rem;color:var(--ink)}
+.langues-list{display:flex;flex-direction:column;gap:1.2rem;margin-top:1rem}
+.langue-name{font-family:'Playfair Display',serif;font-size:1rem}
+.langue-level{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.langue-bar{height:3px;background:var(--sand);width:160px;margin-top:0.3rem}
+.langue-fill{height:100%;background:var(--terra)}
+.contact-section{background:var(--ink);color:var(--cream);padding:4rem 6vw}
+.contact-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,6vw,3rem);line-height:1.2;margin-bottom:1rem}
+.contact-title em{color:var(--gold);font-style:italic}
+.contact-sub{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.7;font-weight:300;margin-bottom:2rem}
+.contact-info{display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem}
+.contact-row{display:flex;align-items:center;gap:0.8rem}
+.contact-val{font-size:0.85rem;color:rgba(255,255,255,0.75)}
+.contact-form{display:flex;flex-direction:column;gap:0.8rem}
+.form-input{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:0.9rem 1rem;color:var(--cream);font-family:'DM Sans',sans-serif;font-size:0.85rem;outline:none;width:100%}
+.form-input::placeholder{color:rgba(255,255,255,0.3)}
+.form-input:focus{border-color:var(--gold)}
+textarea.form-input{resize:vertical;min-height:100px}
+.btn-send{background:var(--terra);color:#fff;border:none;padding:0.9rem 2rem;font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;width:100%;margin-top:0.4rem}
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.07);padding:1.5rem 6vw;text-align:center}
+footer p{font-size:0.72rem;color:rgba(255,255,255,0.3);margin-bottom:0.8rem}
+.social-links{display:flex;gap:1.5rem;justify-content:center}
+.social-links a{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-decoration:none}
+.social-links a:hover{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(min-width:768px){
+.hero{flex-direction:row;text-align:left;justify-content:flex-start;gap:4rem;padding:8rem 8vw 4rem}
+.hero-avatar{margin:0 0 1.5rem}
+.hero-desc{margin:0 0 2rem}
+.hero-btns{justify-content:flex-start}
+.stats{grid-template-columns:repeat(4,1fr)}
+.stat{border-bottom:none}
+.stat:nth-child(2n){border-right:1px solid rgba(255,255,255,0.08)}
+.stat:last-child{border-right:none}
+.section{padding:6rem 8vw}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.formations-grid{display:grid;grid-template-columns:repeat(2,1fr)}
+.projects-list{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:auto auto}
+.project-card.featured{grid-row:span 2}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem}}
+</style>
+</head>
+<body>
+<nav>
+<a href="#" class="nav-logo">Henriette Kragba</a>
+<ul class="nav-links">
+<li><a href="#competences">Compétences</a></li>
+<li><a href="#experience">Expérience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<div class="hero">
+<div><div class="hero-avatar">HK</div></div>
+<div>
+<p class="hero-tag">Community Manager · Création Digitale · Abidjan</p>
+<h1 class="hero-title">Je donne une<br><em>voix digitale</em><br>à votre marque.</h1>
+<p class="hero-desc">Créative, organisée et orientée résultats — je conçois des contenus engageants, anime des communautés et développe la visibilité des marques sur les réseaux sociaux.</p>
+<div class="hero-btns">
+<a href="#projets" class="btn-primary">Voir mes projets</a>
+<a href="#contact" class="btn-outline">Me contacter</a>
+</div>
+<p class="hero-location">📍 Cocody, Abidjan — Côte d'Ivoire</p>
+</div>
+</div>
+<div class="stats reveal">
+<div class="stat"><span class="stat-num">+80K</span><span class="stat-label">Abonnés générés</span></div>
+<div class="stat"><span class="stat-num">3+</span><span class="stat-label">Ans d'expérience</span></div>
+<div class="stat"><span class="stat-num">5.2%</span><span class="stat-label">Taux d'engagement</span></div>
+<div class="stat"><span class="stat-num">10+</span><span class="stat-label">Marques accompagnées</span></div>
+</div>
+<div class="section section-bg reveal" id="competences">
+<p class="s-tag">Ce que je fais</p>
+<h2 class="s-title">Mes compétences clés</h2>
+<p class="s-sub">Une combinaison de créativité, de stratégie et d'analyse pour faire grandir votre présence digitale.</p>
+<div class="skills-grid">
+<div class="skill-card"><div class="skill-icon">📱</div><div class="skill-name">Gestion des Réseaux Sociaux</div><div class="skill-desc">Animation et développement de comptes sociaux avec une ligne éditoriale cohérente, adaptée à chaque plateforme.</div><div class="skill-tags"><span class="tag">Instagram</span><span class="tag">Facebook</span><span class="tag">TikTok</span><span class="tag">LinkedIn</span></div></div>
+<div class="skill-card"><div class="skill-icon">✍️</div><div class="skill-name">Création de Contenu</div><div class="skill-desc">Conception d'affiches digitales, visuels marketing et publications percutantes qui reflètent l'identité de la marque.</div><div class="skill-tags"><span class="tag">Canva</span><span class="tag">Pixel Lab</span><span class="tag">Copywriting</span></div></div>
+<div class="skill-card"><div class="skill-icon">🎯</div><div class="skill-name">Stratégie Éditoriale</div><div class="skill-desc">Planification et optimisation des contenus avec un calendrier éditorial structuré selon les objectifs de la marque.</div><div class="skill-tags"><span class="tag">Planning</span><span class="tag">Storytelling</span><span class="tag">Calendrier</span></div></div>
+<div class="skill-card"><div class="skill-icon">📊</div><div class="skill-name">Analyse & Reporting</div><div class="skill-desc">Suivi hebdomadaire des statistiques, analyse des performances et recommandations basées sur la data.</div><div class="skill-tags"><span class="tag">Meta Insights</span><span class="tag">Reporting</span><span class="tag">KPIs</span></div></div>
+<div class="skill-card"><div class="skill-icon">💬</div><div class="skill-name">Community Building</div><div class="skill-desc">Animation et engagement de la communauté, modération, création d'un lien authentique entre la marque et son audience.</div><div class="skill-tags"><span class="tag">Modération</span><span class="tag">Engagement</span><span class="tag">Fidélisation</span></div></div>
+<div class="skill-card"><div class="skill-icon">📣</div><div class="skill-name">Campagnes Sponsorisées</div><div class="skill-desc">Mise en place et suivi de campagnes Meta Ads pour des objectifs de notoriété ou de conversion.</div><div class="skill-tags"><span class="tag">Meta Ads</span><span class="tag">Ciblage</span><span class="tag">A/B Testing</span></div></div>
+</div>
+</div>
+<div class="section reveal" id="experience">
+<p class="s-tag">Mon parcours</p>
+<h2 class="s-title">Expérience professionnelle</h2>
+<p class="s-sub">Des expériences variées qui ont forgé mon approche créative, stratégique et rigoureuse du digital.</p>
+<div class="exp-item"><div class="exp-period">2025 — Janvier 2026</div><div class="exp-company">Crystal de Roches · Agence de Voyages · Abidjan</div><div class="exp-role">Community Manager</div><ul class="exp-bullets"><li>Community Management & Création digitale</li><li>Gestion et animation des comptes sociaux</li><li>Création de contenus visuels & publications</li><li>Conception d'affiches digitales & supports marketing</li><li>Développement d'identité visuelle</li><li>Planification et optimisation des contenus</li></ul><div class="exp-kpi"><div class="kpi">+35K <span>Abonnés</span></div><div class="kpi">5.8% <span>Engagement</span></div><div class="kpi">×2.5 <span>Portée</span></div></div></div>
+<div class="exp-item"><div class="exp-period">2020 — 2025</div><div class="exp-company">Station SHELL · Béoumi</div><div class="exp-role">Sous-Gérante</div><ul class="exp-bullets"><li>Supervision des opérations quotidiennes</li><li>Management d'équipe et coordination du personnel</li><li>Relation & satisfaction client</li><li>Organisation et rigueur opérationnelle</li></ul><div class="exp-kpi"><div class="kpi">5 ans <span>D'expérience</span></div><div class="kpi">100% <span>Satisfaction</span></div></div></div>
+<div class="exp-item"><div class="exp-period">2017 — 2018</div><div class="exp-company">Assemblée Nationale de Côte d'Ivoire · Abidjan</div><div class="exp-role">Social Media Manager — Stagiaire</div><ul class="exp-bullets"><li>Contribution à la stratégie social media</li><li>Mise en place et suivi de campagnes sponsorisées</li><li>Analyse des statistiques et reporting hebdomadaire</li><li>Coordination avec les équipes marketing et design</li></ul><div class="exp-kpi"><div class="kpi">+12K <span>Abonnés</span></div><div class="kpi">150+ <span>Posts publiés</span></div></div></div>
+</div>
+<div class="section section-bg reveal">
+<p class="s-tag">Formations & Certifications</p>
+<h2 class="s-title">Mon parcours académique</h2>
+<div class="formations-grid">
+<div class="formation-card"><div class="formation-year">Décembre 2025</div><div class="formation-title">Certificat Google Ateliers Numériques</div><div class="formation-org">Google · Abidjan</div></div>
+<div class="formation-card"><div class="formation-year">Janvier 2026</div><div class="formation-title">Certificat HP Life — Sites Web Efficaces</div><div class="formation-org">HP Foundation</div></div>
+<div class="formation-card"><div class="formation-year">2025</div><div class="formation-title">Certificat YALI — Leadership</div><div class="formation-org">Young African Leaders Initiative</div></div>
+<div class="formation-card"><div class="formation-year">2016 — 2017</div><div class="formation-title">BTS Ressources Humaines & Communication</div><div class="formation-org">Côte d'Ivoire</div></div>
+</div>
+</div>
+<div class="section reveal" id="projets">
+<p class="s-tag">Portfolio</p>
+<h2 class="s-title">Projets marquants</h2>
+<div class="projects-list">
+<div class="project-card featured"><div class="project-platform">⭐ Projet Phare</div><div class="project-name">Stratégie Digitale — Crystal de Roches Voyages</div><div class="project-desc">Prise en charge complète : identité visuelle, calendrier éditorial, visuels marketing, animation et campagnes sponsorisées.</div><div class="project-result">+35K <span>abonnés générés</span></div></div>
+<div class="project-card"><div class="project-platform">Instagram · Institutions</div><div class="project-name">Assemblée Nationale CI</div><div class="project-desc">Stratégie éditoriale, campagnes sponsorisées et reporting pour une institution publique.</div><div class="project-result-sm">×3 <span>portée des publications</span></div></div>
+<div class="project-card"><div class="project-platform">Multi-plateformes · Freelance</div><div class="project-name">Clients TPE locales</div><div class="project-desc">Démarrage digital, charte graphique et gestion de pages pour des marques locales.</div><div class="project-result-sm">10+ <span>clients accompagnés</span></div></div>
+<div class="project-card"><div class="project-platform">Canva · Supports Marketing</div><div class="project-name">Création de Visuels & Affiches</div><div class="project-desc">Conception de supports digitaux et identités visuelles pour diverses marques.</div><div class="project-result-sm">200+ <span>visuels créés</span></div></div>
+</div>
+</div>
+<div class="section section-bg reveal">
+<p class="s-tag">Boîte à outils</p>
+<h2 class="s-title">Outils maîtrisés</h2>
+<div class="tools-row">
+<span class="tool-chip">Canva Pro</span><span class="tool-chip">Pixel Lab</span><span class="tool-chip">Meta Business Suite</span><span class="tool-chip">Meta Ads Manager</span><span class="tool-chip">CapCut</span><span class="tool-chip">Nano Banana</span><span class="tool-chip">Google Analytics</span><span class="tool-chip">Google Workspace</span><span class="tool-chip">Hootsuite</span><span class="tool-chip">Trello</span><span class="tool-chip">Notion</span><span class="tool-chip">ChatGPT</span>
+</div>
+<div style="margin-top:3rem">
+<p class="s-tag">Langues</p>
+<div class="langues-list">
+<div><div class="langue-name">Français</div><div class="langue-level">Langue maternelle</div><div class="langue-bar"><div class="langue-fill" style="width:100%"></div></div></div>
+<div><div class="langue-name">Anglais</div><div class="langue-level">Niveau intermédiaire</div><div class="langue-bar"><div class="langue-fill" style="width:55%"></div></div></div>
+</div>
+</div>
+</div>
+<div class="contact-section reveal" id="contact">
+<div class="contact-inner">
+<div>
+<h2 class="contact-title">Travaillons<br><em>ensemble.</em></h2>
+<p class="contact-sub">Disponible pour des missions freelance, CDI ou collaborations. Basée à Cocody, Abidjan. Réponse sous 24h.</p>
+<div class="contact-info">
+<div class="contact-row"><span>📧</span><span class="contact-val">henriettekragba727@gmail.com</span></div>
+<div class="contact-row"><span>📱</span><span class="contact-val">+225 07 78 01 90 11</span></div>
+<div class="contact-row"><span>📍</span><span class="contact-val">Cocody, Abidjan — Côte d'Ivoire</span></div>
+</div>
+</div>
+<div class="contact-form">
+<input type="text" class="form-input" placeholder="Votre nom">
+<input type="email" class="form-input" placeholder="Votre email">
+<input type="text" class="form-input" placeholder="Sujet">
+<textarea class="form-input" placeholder="Décrivez votre projet..."></textarea>
+<button class="btn-send">Envoyer le message</button>
+</div>
+</div>
+</div>
+<footer>
+<p>© 2026 Kragba Deuh Henriette Dadi — Community Manager · Abidjan, CI</p>
+<div class="social-links">
+<a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">Facebook</a>
+</div>
+</footer>
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});
+reveals.forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>
